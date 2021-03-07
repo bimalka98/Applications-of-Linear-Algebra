@@ -1,0 +1,49 @@
+% This LaTeX was auto-generated from MATLAB code.
+% To make changes, update the MATLAB code and export to LaTeX again.
+
+\documentclass{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{graphicx}
+\usepackage{color}
+\usepackage{listings}
+\usepackage{hyperref}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{epstopdf}
+\usepackage{matlab}
+
+\sloppy
+\epstopdfsetup{outdir=./}
+\graphicspath{ {./Euv_images/} }
+
+\begin{document}
+
+\begin{matlabcode}
+syms E(u,v)
+Sxx = 105983042.0;
+Syy = 105671174.0;
+Sxy = 13718014.0;
+E(u,v) = Sxx*u^2 + 2*Sxy*u*v + Syy*v^2
+\end{matlabcode}
+\begin{matlabsymbolicoutput}
+E(u, v) = 
+    $\displaystyle 105983042 u^2 +27436028 u v+105671174 v^2 $
+\end{matlabsymbolicoutput}
+\begin{matlabcode}
+fsurf(E(u,v),[-20 20]);
+\end{matlabcode}
+\begin{center}
+\includegraphics[width=\maxwidth{56.196688409433015em}]{figure_0}
+\end{center}
+\begin{matlabcode}
+
+fcontour(E(u,v),[-20 20]);
+\end{matlabcode}
+\begin{center}
+\includegraphics[width=\maxwidth{56.196688409433015em}]{figure_1}
+\end{center}
+
+\end{document}
